@@ -1,0 +1,1070 @@
+:root {
+    --primary: #11998e;
+    --primary-dark: #0d7e72;
+    --primary-light: #e0f2f1;
+    --secondary: #38ef7d;
+    --success: #4BB543;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --light: #f8f9fa;
+    --dark: #2c3e50;
+    --gray: #95a5a6;
+    --gray-light: #ecf0f1;
+    --white: #ffffff;
+    --border-radius: 10px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.bigcont{
+    margin-top: 200px;
+}
+
+header {
+    background-color: var(--white);
+    color: var(--dark);
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+body.dark-mode header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode header h1 {
+    color: var(--dark);
+}
+
+body.dark-mode .nav-icons i {
+    color: var(--dark);
+}
+
+body.dark-mode .dark-mode-toggle i {
+    color: var(--dark);
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: rotate(15deg);
+}
+
+/* Search Styles */
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background-color: #e9ecef;
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+body.dark-mode .search {
+    background-color: #2d2d2d;
+}
+
+.search:hover {
+    box-shadow: 0 4px 10px rgba(17, 153, 142, 0.5);
+}
+
+.search input {
+    outline: none;
+    border: none;
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+    background: none;
+    color: black;
+}
+
+body.dark-mode .search input {
+    color: #e0e0e0;
+}
+
+.search input::placeholder {
+    color: #6c757d;
+}
+
+body.dark-mode .search input::placeholder {
+    color: #a0a0a0;
+}
+
+.search i {
+    margin-left: 10px;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+/* Search Suggestions */
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 100;
+}
+
+body.dark-mode .search-suggestions {
+    background: #2d2d2d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.search-suggestions div {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-suggestions div:hover {
+    background: #f0f0f0;
+}
+
+body.dark-mode .search-suggestions div:hover {
+    background: #3d3d3d;
+}
+
+/* Navigation Icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background: #11998e;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contact a:hover {
+    background: #17c3b2;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+    --primary: #11998e;
+    --primary-dark: #0d7e72;
+    --primary-light: #1a3a3a;
+    --secondary: #38ef7d;
+    --success: #4BB543;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --light: #2d3748;
+    --dark: #f8f9fa;
+    --gray: #a0aec0;
+    --gray-light: #4a5568;
+    --white: #1a202c;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ... [le reste du fichier CSS reste inchangé] ... */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-theme {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.btn-theme:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+}
+
+.payment-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.order-summary {
+    flex: 1;
+    min-width: 350px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    border-top: 5px solid var(--primary);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.summary-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.secure-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--success);
+    background: rgba(75, 181, 67, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.secure-badge i {
+    font-size: 1rem;
+}
+
+.ticket-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.event-details h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.event-meta i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    color: var(--primary);
+}
+
+.ticket-quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-quantity .quantity {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.ticket-quantity span:last-child {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.price-breakdown {
+    margin-top: 25px;
+}
+
+.price-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--dark);
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--gray-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.payment-steps {
+    flex: 2;
+    min-width: 0;
+}
+
+.payment-step {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 20px;
+    display: none;
+    border-top: 5px solid var(--primary);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-step.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.step-header h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+/* Ajoutez ces styles dans la section dark mode */
+body.dark-mode header {
+    background-color: var(--white); /* Utilise la variable dark mode */
+    color: var(--dark); /* Texte clair */
+}
+
+body.dark-mode .nav-icons i {
+    color: var(--dark); /* Icônes claires */
+}
+
+body.dark-mode .user-account .dropdown {
+    background-color: var(--light); /* Fond du dropdown sombre */
+    color: var(--dark); /* Texte clair */
+}
+
+body.dark-mode .dark-mode-toggle i {
+    color: var(--dark); /* Icône lune claire */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.2);
+}
+
+.form-group i {
+    position: absolute;
+    right: 15px;
+    top: 42px;
+    color: var(--gray);
+}
+
+.card-icons {
+    position: absolute;
+    right: 15px;
+    top: 42px;
+    display: flex;
+    gap: 8px;
+}
+
+.card-icons img {
+    height: 22px;
+    width: auto;
+    opacity: 0.3;
+    transition: var(--transition);
+    filter: grayscale(100%);
+}
+
+.card-icons img.active {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.card-icons img:hover {
+    opacity: 1;
+}
+
+.expiry-fields {
+    display: flex;
+    gap: 15px;
+}
+
+.expiry-fields select {
+    flex: 1;
+}
+
+.cvv-field {
+    position: relative;
+}
+
+.cvv-hint {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: var(--gray);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cvv-hint:hover {
+    color: var(--primary);
+}
+
+.cvv-hint .hint-tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background: var(--white);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 10;
+    transform: translateY(10px);
+}
+
+.cvv-hint .hint-tooltip img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+}
+
+.cvv-hint:hover .hint-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.method-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 5px;
+}
+
+.method-tab {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray);
+    border: 1px solid transparent;
+    background: var(--gray-light);
+}
+
+.method-tab i {
+    font-size: 1.3rem;
+}
+
+.method-tab img {
+    height: 22px;
+    width: auto;
+}
+
+.method-tab.active {
+    color: var(--primary);
+    background-color: rgba(17, 153, 142, 0.1);
+    border-color: var(--primary);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+}
+
+.btn-primary i {
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 16px;
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: var(--border-radius);
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(17, 153, 142, 0.05);
+    border-color: var(--primary-dark);
+    color: var(--primary-dark);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-box {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 450px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.4s ease;
+    border-top: 5px solid var(--primary);
+}
+
+.popup-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.success-animation {
+    margin: 0 auto 25px;
+    width: 100px;
+    height: 100px;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--success);
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: var(--white);
+    stroke-miterlimit: 10;
+    margin: 0 auto;
+    box-shadow: 0 0 0 rgba(75, 181, 67, 0.4);
+    animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+.popup-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.popup-content p {
+    color: var(--gray);
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.order-details {
+    background-color: var(--gray-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.detail-item span:first-child {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.detail-item span:last-child {
+    font-weight: 600;
+}
+
+.popup-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0 0 0 100px var(--success);
+    }
+}
+
+@media (max-width: 768px) {
+    .payment-container {
+        flex-direction: column;
+    }
+    
+    .order-summary {
+        position: static;
+        margin-bottom: 20px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    
+    .method-tabs {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .method-tab {
+        flex-shrink: 0;
+    }
+    
+    .expiry-fields {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Ajoutez ces styles à votre fichier paiement.css existant */
+
+/* CVV Visual Guide - Remplace l'image manquante */
+.cvv-visual-guide {
+    margin-bottom: 10px;
+}
+
+.card-examples {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.card-example {
+    flex: 1;
+    text-align: center;
+}
+
+.card-type-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gray);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-back {
+    width: 80px;
+    height: 50px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 6px;
+    margin: 0 auto 8px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-front {
+    width: 80px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 6px;
+    margin: 0 auto 8px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.magnetic-strip {
+    background: #000;
+    height: 8px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.signature-panel {
+    background: #fff;
+    height: 12px;
+    width: 70%;
+    margin: 6px auto 0;
+    border-radius: 2px;
+    position: relative;
+}
+
+.cvv-highlight {
+    position: absolute;
+    right: 2px;
+    top: 1px;
+    background: #e74c3c;
+    color: white;
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-size: 8px;
+    font-weight: bold;
+    animation: pulse-cvv 2s infinite;
+}
+
+.amex-cvv {
+    position: absolute;
+    right: 6px;
+    top: 30px;
+    background: #e74c3c;
+    color: white;
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-size: 8px;
+    font-weight: bold;
+    animation: pulse-cvv 2s infinite;
+}
+
+.card-description {
+    font-size: 10px;
+    color: var(--gray);
+    line-height: 1.2;
+}
+
+@keyframes pulse-cvv {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Amélioration du tooltip CVV */
+.hint-tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background: var(--white);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 10;
+    transform: translateY(10px);
+    border: 1px solid var(--gray-light);
+}
+
+.hint-tooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    border: 8px solid transparent;
+    border-top-color: var(--white);
+}
+
+.cvv-hint:hover .hint-tooltip,
+.cvv-hint:focus .hint-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.hint-tooltip p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--gray);
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Mode sombre pour le guide CVV */
+[data-theme="dark"] .hint-tooltip {
+    background: var(--white);
+    border-color: var(--gray-light);
+}
+
+[data-theme="dark"] .hint-tooltip::before {
+    border-top-color: var(--white);
+}
+
+[data-theme="dark"] .card-type-label {
+    color: var(--gray);
+}
+
+[data-theme="dark"] .card-description {
+    color: var(--gray);
+}
+
+[data-theme="dark"] .hint-tooltip p {
+    color: var(--gray);
+}
+
+/* Responsive pour le guide CVV */
+@media (max-width: 768px) {
+    .hint-tooltip {
+        width: 220px;
+        right: -50px;
+    }
+    
+    .card-examples {
+        gap: 10px;
+    }
+    
+    .card-back,
+    .card-front {
+        width: 70px;
+        height: 44px;
+    }
+    
+    .magnetic-strip {
+        height: 6px;
+        margin-top: 6px;
+    }
+    
+    .signature-panel {
+        height: 10px;
+        margin: 4px auto 0;
+    }
+    
+    .cvv-highlight,
+    .amex-cvv {
+        font-size: 7px;
+        padding: 1px 2px;
+    }
+    
+    .amex-cvv {
+        top: 25px;
+        right: 4px;
+    }
+}
+
+/* Animation d'entrée pour le guide */
+.cvv-visual-guide {
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Football Tickets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Css/OrderConfirmation.css">
+    <style>
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
+            }
+            
+            .order-container {
+                width: 100%;
+                padding: 10px;
+                margin: 0;
+                zoom: 0.9;
+            }
+            
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 11px;
+                margin-bottom: 10px;
+            }
+            
+            th, td {
+                padding: 4px;
+                border: 1px solid #ddd;
+            }
+            
+            .ticket-details {
+                font-size: 10px;
+                line-height: 1.2;
+            }
+            
+            .client-info {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .info-box {
+                flex: 1;
+                min-width: 200px;
+                padding: 8px;
+                border: 1px solid #eee;
+                border-radius: 4px;
+            }
+            
+            .signature-area {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+            
+            .signature-box {
+                width: 45%;
+                border-top: 1px dashed #000;
+                padding-top: 30px;
+                margin-top: 40px;
+            }
+            
+            .footer-note {
+                font-size: 10px;
+                margin-top: 15px;
+                padding: 8px;
+                border-top: 1px solid #eee;
+            }
+            
+            .print-btn {
+                display: none;
+            }
+            
+            .order-header, .payment-info {
+                margin-bottom: 10px;
+            }
+            
+            @page {
+                size: auto;
+                margin: 5mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <div class="order-header">
+            <h1><i class="fas fa-ticket-alt"></i> Order Confirmation</h1>
+            <p>Football Tickets - Your trusted ticketing partner</p>
+        </div>
+        
+        <div class="order-body">
+            <div class="client-info">
+                <div class="info-box">
+                    <h3><i class="fas fa-user"></i> Customer Information</h3>
+                    <div class="info-item"><strong>Name:</strong> John Smith</div>
+                    
+                    <div class="info-item"><strong>Phone:</strong> +213 657905340</div>
+                    
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-file-invoice"></i> Order Details</h3>
+                    <div class="info-item"><strong>Order #:</strong> ORD-2024-001</div>
+                    <div class="info-item"><strong>Date:</strong> June 15, 2023</div>
+                    <div class="info-item"><strong>Status:</strong> Completed</div>
+                </div>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ref</th>
+                        <th>Ticket</th>
+                        <th>Qty</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TCK-105</td>
+                        <td>
+                            <div class="ticket-name">Upper Corner</div>
+                            <div class="ticket-details">
+                                Real Madrid Leyendas vs Barça Legends<br>
+                                June 15, 2024 - 20:45 (GMT+1) | Santiago Bernabéu, Madrid
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td>$120.00</td>
+                        <td>$240.00</td>
+                    </tr>
+                    <tr>
+                        
+                        
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="4">Subtotal</td>
+                        <td>$480.00</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="4">Service Fee (5%)</td>
+                        <td>$24.00</td>
+                    </tr>
+                    <tr class="total-row grand-total">
+                        <td colspan="4">Total Amount</td>
+                        <td>$504.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="payment-info">
+                <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                <p><strong>Method:</strong> Credit Card (Visa ending in 4242)</p>
+                <p><strong>Payment Status:</strong> Completed</p>
+                <p><strong>Delivery:</strong> E-tickets sent to your email</p>
+            </div>
+            
+            <div class="signature-area">
+                <div class="signature-box">
+                    <p>Customer Signature</p>
+                </div>
+                <div class="signature-box">
+                    <p>For Football Tickets</p>
+                </div>
+            </div>
+            
+
+            
+            <a href="javascript:window.print()" class="print-btn">
+                <i class="fas fa-print"></i> Print This Order
+            </a>
+        </div>
+    </div>
+    <script src="/Js/OrderConfirmation.js"></script>
+</body>
+</html>

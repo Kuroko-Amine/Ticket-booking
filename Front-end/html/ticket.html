@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Ticket Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/Css/ticket.css" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+
+
+    <header>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo" onclick="window.location.href='home.html'">
+            <img src="/img/1.png" alt="Logo">
+            <h1>TikiTiki</h1>
+        </div>
+        <div class="navbar-options">
+            <div class="option"><a href="home.html">Home</a></div>
+            <div class="option"><a href="#ticket">Ticket</a></div>
+            <div class="option"><a href="#about">About</a></div>
+            <div class="option"><a href="#venue">Venue</a></div>
+        </div>
+        <div class="nav-icons">
+            
+
+            <div class="dark-mode-toggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </div>
+
+            <div class="user-account">
+                <i class="fas fa-user" title="Account" id="userIcon"></i>
+                <div class="dropdown" id="accountDropdown">
+                    <!-- Content will be populated by JavaScript based on login status -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+    <!--TICKET INFO SECTION-->
+    <section id="ticket">
+        <div class="container">
+            <div class="match-image">
+                <img>
+            </div>
+            
+            <div class="ticket-info">
+                <h1></h1>
+                
+                <div class="details">
+                    <p><i class="fas fa-soccer-ball"></i></p>
+                    <p><i class="far fa-calendar-alt"></i></p>
+                    <p><i class="fas fa-map-marker-alt"></i></p>
+                </div>
+                
+                <div class="price">
+                    <div class="price-label"></div>
+                    <div class="price-amount"></div>
+                </div>
+                
+                <button class="book-btn" onclick="bookTicket()">BOOK TICKET</button>
+            </div>
+        </div>
+    </section>
+
+    <!--ABOUT SECTIOON-->
+    <section id="about">
+        <div>
+        <div class="About-container">
+            <div class="about-details">
+                <h2 class="section-title">About The Match</h2>
+                <p class="text"></p>
+            </div>
+        </div>
+            <div class="guide">
+                <div class="guide-item">
+                    <i class="far fa-clock"></i>
+                    <div>
+                        <h3>Duration</h3>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="guide-item">
+                    <i class="fas fa-ticket-alt"></i>
+                    <div>
+                        <h3>Tickets Needed</h3>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="guide-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <div>
+                        <h3>Venue Type</h3>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="guide-item">
+                    <i class="fas fa-chair"></i>
+                    <div>
+                        <h3>Arrangement</h3>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="guide-item">
+                    <i class="fas fa-child"></i>
+                    <div>
+                        <h3>Kid Friendly</h3>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <div class="guide-item">
+                    <i class="fas fa-paw"></i>
+                    <div>
+                        <h3>Pet Friendly</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+    <section class="venue-section" id="venue">
+        <h2 class="venue-title">Venue</h2>
+        
+        <div class="venue-content">
+            <div class="venue-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.788129584234!2d73.01626631538406!3d19.07047198708979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c14a63555555%3A0x7e4a3f6a3a3a3a3a!2sD%20Y%20Patil%20Sports%20Stadium!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="venue-details">
+                <h3 class="venue-name"></h3>
+                <p class="venue-address"></p>
+                
+                <div class="venue-features">
+                    <span class="feature">
+                        <i class="fas fa-car"></i>
+                    </span>
+                    <span class="feature">
+                        <i class="fas fa-wheelchair"></i>
+                    </span>
+                    <span class="feature">
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                </div>
+                
+                <a href="https://maps.google.com?q=D+Y+Patil+Sports+Stadium,Sector+7,+Nerul,+Navi+Mumbai,+Maharashtra+400706,+India" class="directions-btn" target="_blank">
+                    <i class="fas fa-directions"></i> GET DIRECTIONS
+                </a>
+            </div>
+        </div>
+    </section>    
+    </main>
+
+    <footer>
+        <div class="contact">
+            <a href="terms.html" class="footer-link" id="aboutLink">Terms Of Service</a>
+            <a href="privacy.html" class="footer-link" id="privacyLink">Privacy Policy</a>
+            <a href="javascript:void(0)" class="footer-link" id="contactLink">Contact US</a>
+        </div>
+        <div class="titre" onclick="window.location.href='/html/home.html'">
+            <img src="/img/1.png" alt="Football Logo">
+            <h1>TikiTiki</h1>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span class="year">2025</span></p>
+        </div>
+    </footer>
+    <script src="/Js/pop-up.js"></script>
+    <script src="/Js/auth.js"></script>
+    <script src="/Js/home.js"></script>
+    <script src="/Js/ticket.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikiTiki Admin - Accounts</title>
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Css/admin/styles.css">
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="index.html" class="brand">
+            <i class='bx bxs-football'></i>
+            <span class="text">TikiTiki</span>
+        </a>
+        <ul class="side-menu top">
+            <li>
+                <a href="/html/admin/index.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/admin/matches.html">
+                    <i class='bx bxs-shopping-bag-alt'></i>
+                    <span class="text">Match Management</span>
+                </a>
+            </li>
+            <li>
+                <a href="/html/admin/analytics.html">
+                    <i class='bx bxs-doughnut-chart'></i>
+                    <span class="text">Analytics</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="/html/admin/accounts.html">
+                    <i class='bx bx-group'></i>
+                    <span class="text">Accounts</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="/html/login.html" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <a href="accounts.html" class="nav-link">Accounts</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <!-- Dark mode toggle -->
+            <div class="switch-mode-container">
+                <input type="checkbox" id="switch-mode" hidden>
+                <label for="switch-mode" class="switch-mode"></label>
+            </div>
+        </nav>
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>User Accounts</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="/html/admin/index.html">TikiTiki</a></li>
+                        <li><i class='bx bx-chevron-right'></i></li>
+                        <li><a class="active" href="/html/admin/accounts.html">Accounts</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div class="accounts-grid">
+                <div class="accounts-list">
+                    <div class="table-header">
+                        <h3>User Management</h3>
+                        
+                    </div>
+                    
+                    <div class="users-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                                    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Add/Edit User Modal -->
+            <div class="modal" id="user-modal">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <h2 id="user-modal-title">Add New User</h2>
+                        <span class="close-modal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <form id="user-form">
+                            <div class="form-group">
+                                <label for="user-name">Full Name</label>
+                                <input type="text" id="user-name" placeholder="e.g. John Doe" required>
+                            </div>
+                            
+                          
+                            
+                      
+                            
+                            <div class="form-group">
+                                <label for="user-status">Status</label>
+                                <select id="user-status" required>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="user-password">Password</label>
+                                <input type="password" id="user-password" placeholder="Enter password" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="user-confirm-password">Confirm Password</label>
+                                <input type="password" id="user-confirm-password" placeholder="Confirm password" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" form="user-form" class="submit-btn">Add User</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+            <script>
+        function confirmLogout(e) {
+            e.preventDefault();
+            if(confirm('Are you sure you want to logout?')) {
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+    <script src="/Js/admin/accounts.js"></script>
+</body>
+</html>
