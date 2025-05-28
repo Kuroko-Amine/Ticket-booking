@@ -1,0 +1,289 @@
+
+:root {
+    --primary-color: #11998e;
+    --primary-hover: #0d7e72;
+    --secondary-color: #f5f5f5;
+    --accent-color: #facc15;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --bg-light: #ffffff;
+    --bg-dark: #121212;
+    --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-card {
+    width: 450px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+body.dark-mode .contact-card {
+    background: #1e1e1e;
+}
+
+.popup-overlay.active .contact-card {
+    transform: scale(1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.card-header h3 {
+    
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+.card-header p {
+    margin: 8px 0 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    color: white;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    background: #e8f5e9;
+}
+
+.dark-mode .contact-item {
+    background: #2d3436;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: #1d7a46;
+    font-size: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .contact-icon {
+    background: #171a1b;
+}
+
+.contact-info h4 {
+    margin: 0 0 8px 0;
+    color: #0d4b26;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.dark-mode .contact-info h4 {
+    color: #27ae60;
+}
+
+.contact-info p {
+    font-size:13px;
+    color:#777;
+    margin-top:5px;
+}
+
+.dark-mode .contact-info p {
+    font-size:13px;
+    color:white;
+    margin-top:5px;
+}
+
+.small-note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.dark-mode .small-note {
+    color: #aaa;
+}
+
+.contact-info a {
+    color: #1d7a46;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.dark-mode .contact-info a {
+    color: #2ecc71;
+}
+
+.contact-info a:hover {
+    color: #0d4b26;
+    text-decoration: underline;
+}
+
+.dark-mode .contact-info a:hover {
+    color: #27ae60;
+}
+
+.emergency-notice {
+    background: #fff8e1;
+    border-left: 4px solid #ffd700;
+    padding: 15px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode .emergency-notice {
+    background: #2d3436;
+    border-left: 4px solid #f39c12;
+}
+
+.emergency-notice i {
+    color: #ffd700;
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+.dark-mode .emergency-notice i {
+    color: #f39c12;
+}
+
+.emergency-notice p {
+    margin: 0;
+    font-size: 14px;
+    color: #5c3b00;
+}
+
+.dark-mode .emergency-notice p {
+    color: #f5f5f5;
+}
+
+.stadium-icon {
+    position: absolute;
+    opacity: 0.05;
+    font-size: 180px;
+    bottom: -40px;
+    right: -30px;
+    z-index: 0;
+    color: #1d7a46;
+}
+
+.dark-mode .stadium-icon {
+    color: #2ecc71;
+}
+
+.dark-mode-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.dark-mode .dark-mode-container {
+    border-top: 1px solid #444;
+}
+
+.dark-mode-toggle-card {
+    background: transparent;
+    border: none;
+    color: #1d7a46;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.dark-mode .dark-mode-toggle-card {
+    color: #2ecc71;
+}
+
+.dark-mode-toggle-card:hover {
+    background: rgba(29, 122, 70, 0.1);
+}
+
+.dark-mode .dark-mode-toggle-card:hover {
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.dark-mode-toggle-card i {
+    margin-right: 8px;
+}
+.popup-overlay {
+    display: none; 
+}
+
+.popup-overlay.active {
+    display: flex;
+}

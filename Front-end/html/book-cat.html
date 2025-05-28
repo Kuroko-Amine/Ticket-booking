@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Stadium</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="/Css/book-cat.css" rel="stylesheet">
+        <link rel="stylesheet" href="/Css/ticket-pop-up.css">
+
+    </head>
+    <body>
+        <div class="loading-overlay">
+            <div class="loading-spinner"></div>
+        </div>
+        <header>
+          <div class="logo" onclick="window.location.href='home.html'">
+              <img src="/img/1.png" alt="Logo">
+              <h1>TikiTiki</h1>
+          </div>
+  
+          
+          <div class="nav-icons">
+              
+              <div class="dark-mode-toggle" title="Toggle Dark Mode">
+                  <i class="fas fa-moon"></i>
+              </div>
+  
+              <div class="user-account">
+                  <i class="fas fa-user" title="Account" id="userIcon"></i>
+                  <div class="dropdown" id="accountDropdown">
+                      <!-- Content will be populated by JavaScript based on login status -->
+                  </div>
+              </div>
+          </div>
+      </header>
+        <div class="fixed-header">
+            <h1></h1><br>
+            <p></p>
+        </div>
+        <div class="stadium-container">
+            <div class="stadium">
+                <div class="stade">
+                <svg width="524" height="449" viewBox="0 0 524 449" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="Group 1">
+                    <!-- Top Sections -->
+                    <path id="section 434" class="cat-01" d="M187.5 4.5H211.5V51H187.5V4.5Z" fill="#D9D9D9" data-section="434" data-card="cat-01-listing" />
+                    <text x="199.5" y="27.75" font-size="8" text-anchor="middle" fill="#666" >434</text>
+                    
+                    <rect id="section 433" class="cat-01" x="213" y="5" width="36.5" height="46.5" fill="#D9D9D9" data-section="433" data-card="cat-01-listing"/>
+                    <text x="231.25" y="28.25" font-size="8" text-anchor="middle" fill="#666">433</text>
+                    
+                    <path id="section 435" class="cat-01" d="M155.5 4.5H186.5V51.5H155.5V4.5Z" fill="#D9D9D9" data-section="435" data-card="cat-01-listing"/>
+                    <text x="171" y="28" font-size="8" text-anchor="middle" fill="#666">435</text>
+                    
+                    <rect id="section 432" class="cat-01" x="250.5" y="4.5" width="22" height="47" fill="#D9D9D9" data-section="432" data-card="cat-01-listing"/>
+                    <text x="261.5" y="28" font-size="8" text-anchor="middle" fill="#666">432</text>
+                    
+                    <rect id="section 431" class="cat-01" x="273.5" y="4" width="36.5" height="48" fill="#D9D9D9" data-section="431" data-card="cat-01-listing"/>
+                    <text x="291.75" y="28" font-size="8" text-anchor="middle" fill="#666">431</text>
+                    
+                    <rect id="section 430" class="cat-01" x="311" y="4" width="24" height="48" fill="#D9D9D9" data-section="430" data-card="cat-01-listing"/>
+                    <text x="323" y="28" font-size="8" text-anchor="middle" fill="#666">430</text>
+                    
+                    <path id="section 428" class="cat-01" d="M368 4H403L400 51H368V4Z" fill="#D9D9D9" data-section="428" data-card="cat-01-listing"/>
+                    <text x="385.5" y="27.5" font-size="8" text-anchor="middle" fill="#666">428</text>
+                    
+                    <rect id="section 429" class="cat-01" x="336.5" y="4.5" width="31" height="47" fill="#D9D9D9" data-section="429" data-card="cat-01-listing" style="box-shadow: 10px black"/>
+                    <text x="352" y="28" font-size="8" text-anchor="middle" fill="#666">429</text>
+                    
+                    <path id="section 436" class="cat-01" d="M120 4.5H155V51.5H122.536L120 4.5Z" fill="#D9D9D9" data-section="436" data-card="cat-01-listing"/>
+                    <text x="137.5" y="28" font-size="8" text-anchor="middle" fill="#666">436</text>
+                    
+                    <!-- Middle Sections -->
+                    <rect id="section 134" class="cat-02" x="213" y="53" width="28" height="61" fill="#D9D9D9" data-section="134" data-card="cat-02-listing"/>
+                    <text x="227" y="83.5" font-size="8" text-anchor="middle" fill="#666">134</text>
+                    
+                    <rect id="section 135" class="cat-02" x="191" y="53" width="21" height="61" fill="#D9D9D9" data-section="135" data-card="cat-02-listing"/>
+                    <text x="201.5" y="83.5" font-size="8" text-anchor="middle" fill="#666">135</text>
+                    
+                    <rect id="section 136" class="cat-01" x="169" y="53" width="21" height="61" fill="#D9D9D9" data-section="136" data-card="cat-01-listing"/>
+                    <text x="179.5" y="83.5" font-size="8" text-anchor="middle" fill="#666">136</text>
+                    
+                    <rect id="section 133" class="cat-02" x="242" y="53" width="39" height="61" fill="#D9D9D9" data-section="133" data-card="cat-02-listing"/>
+                    <text x="261.5" y="83.5" font-size="8" text-anchor="middle" fill="#666">133</text>
+                    
+                    <rect id="section 132" class="cat-02" x="282.5" y="53" width="27.5" height="61" fill="#D9D9D9" data-section="132" data-card="cat-02-listing"/>
+                    <text x="296.25" y="83.5" font-size="8" text-anchor="middle" fill="#666">132</text>
+                    
+                    <rect id="section 131" class="cat-02" x="311.5" y="53" width="20.5" height="61" fill="#D9D9D9" data-section="131" data-card="cat-02-listing"/>
+                    <text x="321.75" y="83.5" font-size="8" text-anchor="middle" fill="#666">131</text>
+                    
+                    <rect id="section 130" class="cat-01" x="333" y="53" width="22" height="61" fill="#D9D9D9" data-section="130" data-card="cat-01-listing"/>
+                    <text x="344" y="83.5" font-size="8" text-anchor="middle" fill="#666">130</text>
+                    
+                    <path id="section 129" class="cat-01" d="M355.5 53H404L393.896 114H355.5V53Z" fill="#D9D9D9" data-section="129" data-card="cat-01-listing"/>
+                    <text x="379.75" y="83.5" font-size="8" text-anchor="middle" fill="#666">129</text>
+                    
+                    <path id="section 137" class="cat-01" d="M119 53H168V114H129L119 53Z" fill="#D9D9D9" data-section="137" data-card="cat-01-listing"/>
+                    <text x="143.5" y="83.5" font-size="8" text-anchor="middle" fill="#666">137</text>
+                    
+                    <!-- Bottom Sections -->
+                    <rect id="section 108" class="cat-02" x="187.5" y="351" width="52" height="46" fill="#D9D9D9" data-section="108" data-card="cat-02-listing"/>
+                    <text x="213.5" y="374" font-size="8" text-anchor="middle" fill="#666">108</text>
+                    
+                    <rect id="section 109" class="cat-02" x="240" y="351" width="43" height="46" fill="#D9D9D9" data-section="109" data-card="cat-02-listing"/>
+                    <text x="261.5" y="374" font-size="8" text-anchor="middle" fill="#666">109</text>
+                    
+                    <rect id="section 110" class="cat-02" x="284" y="351" width="52" height="46" fill="#D9D9D9" data-section="110" data-card="cat-02-listing"/>
+                    <text x="310" y="374" font-size="8" text-anchor="middle" fill="#666">110</text>
+                    
+                    <rect id="section 405" class="cat-01" x="155" y="398" width="30" height="47" fill="#D9D9D9" data-section="405" data-card="cat-01-listing"/>
+                    <text x="170" y="421.5" font-size="8" text-anchor="middle" fill="#666">405</text>
+                    
+                    <rect id="section 406" class="cat-02" x="186" y="398" width="24" height="47" fill="#D9D9D9" data-section="406" data-card="cat-02-listing"/>
+                    <text x="198" y="421.5" font-size="8" text-anchor="middle" fill="#666">406</text>
+                    
+                    <rect id="section 407" class="cat-02" x="211" y="398" width="33.5" height="47" fill="#D9D9D9" data-section="407" data-card="cat-02-listing"/>
+                    <text x="227.75" y="421.5" font-size="8" text-anchor="middle" fill="#666">407</text>
+                    
+                    <rect id="section 408" class="cat-02" x="245" y="398" width="33" height="47" fill="#D9D9D9" data-section="408" data-card="cat-02-listing"/>
+                    <text x="261.5" y="421.5" font-size="8" text-anchor="middle" fill="#666">408</text>
+                    
+                    <rect id="section 409" class="cat-02" x="279" y="398" width="40" height="47" fill="#D9D9D9" data-section="409" data-card="cat-02-listing"/>
+                    <text x="299" y="421.5" font-size="8" text-anchor="middle" fill="#666">409</text>
+                    
+                    <rect id="section 410" class="cat-02" x="320" y="398" width="22" height="47" fill="#D9D9D9" data-section="410" data-card="cat-02-listing"/>
+                    <text x="331" y="421.5" font-size="8" text-anchor="middle" fill="#666">410</text>
+                    
+                    <rect id="section 411" class="cat-01" x="343" y="398" width="25" height="47" fill="#D9D9D9" data-section="411" data-card="cat-01-listing"/>
+                    <text x="355.5" y="421.5" font-size="8" text-anchor="middle" fill="#666">411</text>
+
+                    <rect id="section 105" class="cat-01" x="184" y="336" width="29.5" height="13.5" fill="#D9D9D9" data-section="105" data-card="cat-01-listing"/>
+                    <text x="198.75" y="342.75" font-size="6" text-anchor="middle" fill="#666">105</text>
+
+                    <rect id="section 106" class="cat-01" x="214" y="336" width="20" height="14" fill="#D9D9D9" data-section="106" data-card="cat-01-listing"/>
+                    <text x="224" y="343" font-size="6" text-anchor="middle" fill="#666">106</text>
+
+                    <rect id="section 107" class="cat-01" x="235" y="336" width="17" height="14" fill="#D9D9D9" data-section="107" data-card="cat-01-listing"/>
+                    <text x="243.5" y="343" font-size="6" text-anchor="middle" fill="#666">107</text>
+
+                    <rect id="section 111" class="cat-01" x="272" y="336" width="16" height="14" fill="#D9D9D9" data-section="111" data-card="cat-01-listing"/>
+                    <text x="280" y="343" font-size="6" text-anchor="middle" fill="#666">111</text>
+
+                    <rect id="section 112" class="cat-01" x="289" y="336" width="20" height="14" fill="#D9D9D9" data-section="112" data-card="cat-01-listing"/>
+                    <text x="299" y="343" font-size="6" text-anchor="middle" fill="#666">112</text>
+
+                    <rect id="section 113" class="cat-01" x="310" y="336" width="29" height="14" fill="#D9D9D9" data-section="113" data-card="cat-01-listing"/>
+                    <text x="324.5" y="343" font-size="6" text-anchor="middle" fill="#666">113</text>
+
+                    <path id="section 412" class="cat-01" d="M369 398H401.083L404 445H369V398Z" fill="#D9D9D9" data-section="412" data-card="cat-01-listing"/>
+                    <text x="385" y="421.5" font-size="8" text-anchor="middle" fill="#666">412</text>
+
+                    <path id="section 115" class="cat-01" d="M372 336H395L404 397H372V336Z" fill="#D9D9D9" data-section="115" data-card="cat-01-listing"/>
+                    <text x="383.5" y="366.5" font-size="8" text-anchor="middle" fill="#666">115</text>
+
+                    <path id="section 103" class="cat-01" d="M129 336H151V397H119L129 336Z" fill="#D9D9D9" data-section="103" data-card="cat-01-listing"/>
+                    <text x="140" y="366.5" font-size="8" text-anchor="middle" fill="#666">103</text>
+
+                    <path id="section 404" class="cat-01" d="M122.475 398H154.25V445H119L122.475 398Z" fill="#D9D9D9" data-section="404" data-card="cat-01-listing"/>
+                    <text x="138.5" y="421.5" font-size="8" text-anchor="middle" fill="#666">404</text>
+
+                    <rect id="section 142" class="cat-03" x="48" y="152" width="61" height="23.5" fill="#D9D9D9" data-section="142" data-card="cat-03-listing"/>
+                    <text x="78.5" y="163.75" font-size="8" text-anchor="middle" fill="#666">142</text>
+
+                    
+                    <rect id="section 143" class="cat-03" x="63" y="176" width="46" height="33.5" fill="#D9D9D9" data-section="143" data-card="cat-03-listing"/>
+                    <text x="86" y="196.75" font-size="8" text-anchor="middle" fill="#666">143</text>
+
+                    <rect id="section 144" class="cat-04" x="63" y="210.5" width="46" height="29" fill="#D9D9D9" data-section="144" data-card="cat-04-listing"/>
+                    <text x="86" y="225" font-size="8" text-anchor="middle" fill="#666">144</text>
+
+                    <rect id="section 145" class="cat-03" x="63" y="240.5" width="46" height="32" fill="#D9D9D9" data-section="145" data-card="cat-03-listing"/>
+                    <text x="86" y="256.5" font-size="8" text-anchor="middle" fill="#666">145</text>
+
+                    <rect id="section 442" class="cat-03" y="143.5" width="46.5" height="32" fill="#D9D9D9" data-section="442" data-card="cat-03-listing"/>
+                    <text x="23.25" y="159.5" font-size="8" text-anchor="middle" fill="#666">442</text>
+
+                    <rect id="section 443" class="cat-04" y="176.75" width="47" height="32.5" fill="#D9D9D9" data-section="443" data-card="cat-04-listing"/>
+                    <text x="23.5" y="193" font-size="8" text-anchor="middle" fill="#666">443</text>
+
+                    <rect id="section 444" class="cat-05" y="210.5" width="47" height="29" fill="#D9D9D9" data-section="444" data-card="cat-05-listing"/>
+                    <text x="23.5" y="225" font-size="8" text-anchor="middle" fill="#666">444</text>
+
+                    <rect id="section 445" class="cat-04" y="241" width="47" height="31.5" fill="#D9D9D9" data-section="445" data-card="cat-04-listing"/>
+                    <text x="23.5" y="256.75" font-size="8" text-anchor="middle" fill="#666">445</text>
+
+                    <rect id="section 446" class="cat-03" y="274" width="47" height="35" fill="#D9D9D9" data-section="446" data-card="cat-03-listing"/>
+                    <text x="23.5" y="291.5" font-size="8" text-anchor="middle" fill="#666">446</text>
+
+                    <rect id="section 355" class="cat-06" x="48" y="177" width="13" height="32" fill="#D9D9D9" data-section="355" data-card="cat-06-listing"/>
+                    <text x="54.5" y="193" font-size="6" text-anchor="middle" fill="#666">355</text>
+
+                    <rect id="section 356" class="cat-06" x="48" y="211" width="13" height="29" fill="#D9D9D9" data-section="356" data-card="cat-06-listing"/>
+                    <text x="54.5" y="225.5" font-size="6" text-anchor="middle" fill="#666">356</text>
+
+                    <rect id="section 357" class="cat-06" x="48" y="241" width="13" height="32" fill="#D9D9D9" data-section="357" data-card="cat-06-listing"/>
+                    <text x="54.5" y="257" font-size="6" text-anchor="middle" fill="#666">357</text>
+
+                    <rect id="section 358" class="cat-06" x="48" y="274" width="13" height="27" fill="#D9D9D9" data-section="358" data-card="cat-06-listing"/>
+                    <text x="54.5" y="287.5" font-size="6" text-anchor="middle" fill="#666">358</text>
+
+                    <rect id="section 124" class="cat-03" x="413" y="152" width="62" height="24" fill="#D9D9D9" data-section="124" data-card="cat-03-listing"/>
+                    <text x="444" y="164" font-size="8" text-anchor="middle" fill="#666">124</text>
+
+                    <rect id="section 123" class="cat-03" x="413" y="177" width="47" height="32" fill="#D9D9D9" data-section="123" data-card="cat-03-listing"/>
+                    <text x="436.5" y="193" font-size="8" text-anchor="middle" fill="#666">123</text>
+
+                    <rect id="section 122" class="cat-04" x="413" y="210" width="47" height="30" fill="#D9D9D9" data-section="122" data-card="cat-04-listing"/>
+                    <text x="436.5" y="225" font-size="8" text-anchor="middle" fill="#666">122</text>
+
+                    <rect id="section 121" class="cat-03" x="413" y="241" width="47" height="31" fill="#D9D9D9" data-section="121" data-card="cat-03-listing"/>
+                    <text x="436.5" y="256.5" font-size="8" text-anchor="middle" fill="#666">121</text>
+
+                    <rect id="section 422" class="cat-03" x="477" y="144" width="46" height="31" fill="#D9D9D9" data-section="422" data-card="cat-03-listing"/>
+                    <text x="500" y="159.5" font-size="8" text-anchor="middle" fill="#666">422</text>
+
+                    <rect id="section 421" class="cat-04" x="476.5" y="177" width="46.5" height="32" fill="#D9D9D9" data-section="421" data-card="cat-04-listing"/>
+                    <text x="499.75" y="193" font-size="8" text-anchor="middle" fill="#666">421</text>
+
+                    <rect id="section 420" class="cat-05" x="476" y="210" width="47" height="29" fill="#D9D9D9" data-section="420" data-card="cat-05-listing"/>
+                    <text x="499.5" y="224.5" font-size="8" text-anchor="middle" fill="#666">420</text>
+
+                    <rect id="section 419" class="cat-04" x="476.5" y="241" width="47" height="31.5" fill="#D9D9D9" data-section="419" data-card="cat-04-listing"/>
+                    <text x="500" y="256.75" font-size="8" text-anchor="middle" fill="#666">419</text>
+
+                    <rect id="section 418" class="cat-03" x="476.5" y="273.5" width="47" height="36" fill="#D9D9D9" data-section="418" data-card="cat-03-listing"/>
+                    <text x="500" y="291.5" font-size="8" text-anchor="middle" fill="#666">418</text>
+
+                    <rect id="section 315" class="cat-06" x="461" y="177" width="14" height="32" fill="#D9D9D9" data-section="315" data-card="cat-06-listing"/>
+                    <text x="468" y="193" font-size="6" text-anchor="middle" fill="#666">315</text>
+
+                    <rect id="section 314" class="cat-06" x="461" y="210" width="14" height="29" fill="#D9D9D9" data-section="314" data-card="cat-06-listing"/>
+                    <text x="468" y="224.5" font-size="6" text-anchor="middle" fill="#666">314</text>
+
+                    <rect id="section 313" class="cat-06" x="461" y="241" width="14" height="31" fill="#D9D9D9" data-section="313" data-card="cat-06-listing"/>
+                    <text x="468" y="256.5" font-size="6" text-anchor="middle" fill="#666">313</text>
+
+                    <rect id="section 312" class="cat-06" x="461" y="274" width="14" height="27" fill="#D9D9D9" data-section="312" data-card="cat-06-listing"/>
+                    <text x="468" y="287.5" font-size="6" text-anchor="middle" fill="#666">312</text>
+                    <path id="section 413" class="cat-01" d="M401.64 399.896C401.561 398.834 402.329 397.896 403.386 397.764L413.29 396.526C413.43 396.509 413.567 396.477 413.699 396.431L423.217 393.12C424.218 392.772 425.317 393.265 425.722 394.245L442.199 434.065C442.636 435.119 442.103 436.324 441.031 436.711L425.187 442.433C425.062 442.478 424.934 442.51 424.804 442.529L407.133 445.18C405.982 445.353 404.927 444.51 404.842 443.349L401.64 399.896Z" fill="#D9D9D9" data-section="413" data-card="cat-01-listing"/>
+                    <text x="415" y="420" font-size="8" text-anchor="middle" fill="#666">413</text>
+
+                    <path id="section 414" class="cat-03" d="M427.185 394.183C426.797 393.228 427.197 392.135 428.109 391.657L436.817 387.096C436.939 387.032 437.054 386.956 437.16 386.868L443.978 381.254C444.822 380.559 446.068 380.67 446.775 381.505L474.643 414.398C475.381 415.27 475.24 416.582 474.333 417.278L461.171 427.369C461.057 427.456 460.935 427.531 460.806 427.592L445.909 434.602C444.871 435.09 443.637 434.608 443.205 433.546L427.185 394.183Z" fill="#D9D9D9" data-section="414" data-card="cat-03-listing"/>
+                    <text x="450" y="410" font-size="8" text-anchor="middle" fill="#666">414</text>
+
+                    <path id="section 415" class="cat-03" d="M447.5 378.5L456 370.5L463.5 361.5L503 386L492 402L478 415.5L447.5 378.5Z" fill="#D9D9D9" data-section="415" data-card="cat-03-listing"/>
+                    <text x="475" y="390" font-size="8" text-anchor="middle" fill="#666">415</text>
+
+                    <path id="section 416" class="cat-03" d="M505.482 382.166C504.946 383.167 503.685 383.521 502.706 382.946L465.994 361.378C465.137 360.874 464.78 359.817 465.156 358.896L472.846 340.099C473.222 339.181 474.214 338.677 475.177 338.915L517.77 349.449C518.949 349.74 519.598 351.006 519.147 352.133L512 370L505.482 382.166Z" fill="#D9D9D9" data-section="416" data-card="cat-03-listing"/>
+                    <text x="490" y="365" font-size="8" text-anchor="middle" fill="#666">416</text>
+
+                    <path id="section 417" class="cat-03" d="M476.796 312.771C476.912 311.762 477.767 311 478.783 311H521C522.105 311 523 311.895 523 313V328.835C523 328.945 522.991 329.055 522.973 329.163L520.345 344.928C520.157 346.056 519.065 346.797 517.948 346.554L475.77 337.385C474.765 337.166 474.09 336.222 474.208 335.201L476.796 312.771Z" fill="#D9D9D9" data-section="417" data-card="cat-03-listing"/>
+                    <text x="500" y="330" font-size="8" text-anchor="middle" fill="#666">417</text>
+
+                    <path id="section 403" class="cat-01" d="M98.0983 392.571L121.049 397.571L118.049 444.571L98.0983 441.571L80.5494 435.571L98.0983 392.571Z" fill="#D9D9D9" data-section="403" data-card="cat-01-listing"/>
+                    <text x="100" y="420" font-size="8" text-anchor="middle" fill="#666">403</text>
+
+                    <path id="section 402" class="cat-03" d="M77 380L86.5 387L97 392L79 435L62 427L47 416L77 380Z" fill="#D9D9D9" data-section="402" data-card="cat-03-listing"/>
+                    <text x="75" y="405" font-size="8" text-anchor="middle" fill="#666">402</text>
+
+                    <path id="section 401" class="cat-03" d="M59.5 361.5L67.5 371L76 379.5L45.5 414.5L30 400L20.5 385.5L59.5 361.5Z" fill="#D9D9D9" data-section="401" data-card="cat-03-listing"/>
+                    <text x="50" y="390" font-size="8" text-anchor="middle" fill="#666">401</text>
+
+                    <path id="section 447" class="cat-03" d="M0 311H47V324.5L49 336.5L4 348L0 330.5V311Z" fill="#D9D9D9" data-section="447" data-card="cat-03-listing"/>
+                    <text x="25" y="330" font-size="8" text-anchor="middle" fill="#666">447</text>
+
+                    <path id="section 448" class="cat-03" d="M3.99999 349.5L49.5 338.5L53.5 349.5L59 360L19 384L10.5 368L3.99999 349.5Z" fill="#D9D9D9" data-section="448" data-card="cat-03-listing"/>
+                    <text x="30" y="365" font-size="8" text-anchor="middle" fill="#666">448</text>
+
+                    <path id="section 427" class="cat-01" d="M404.5 4.5L425 7.49999L442.5 14.5L425 57.5L401 52L404.5 4.5Z" fill="#D9D9D9" data-section="427" data-card="cat-01-listing"/>
+                    <text x="415" y="30" font-size="8" text-anchor="middle" fill="#666">427</text>
+
+                    <path id="section 426" class="cat-03" d="M445.025 14.9574L461.541 22.3122L477.5 34L445.874 69.9905L426.801 58.0114L445.025 14.9574Z" fill="#D9D9D9" data-section="426" data-card="cat-03-listing"/>
+                    <text x="455" y="45" font-size="8" text-anchor="middle" fill="#666">426</text>
+
+                    <path id="section 425" class="cat-03" d="M478.5 36L492.5 49.5L503.5 64.5L463.5 89.5L456.5 79L447.5 70.7702L478.5 36Z" fill="#D9D9D9" data-section="425" data-card="cat-03-listing"/>
+                    <text x="480" y="60" font-size="8" text-anchor="middle" fill="#666">425</text>
+
+                    <path id="section 424" class="cat-03" d="M504.5 66L514 84.5L519.5 102L475 113L464 90.5L504.5 66Z" fill="#D9D9D9" data-section="424" data-card="cat-03-listing"/>
+                    <text x="490" y="90" font-size="8" text-anchor="middle" fill="#666">424</text>
+
+                    <path id="section 423" class="cat-03" d="M474.5 115.5L521 103.5L523.5 123V143H477L474.5 115.5Z" fill="#D9D9D9" data-section="423" data-card="cat-03-listing"/>
+                    <text x="500" y="130" font-size="8" text-anchor="middle" fill="#666">423</text>
+
+                    <path id="section 437" class="cat-01" d="M80 13.5001L98.0001 8.00006L118 5.50002L121.5 51.5001L98.0001 57.5L80 13.5001Z" fill="#D9D9D9" data-section="437" data-card="cat-01-listing"/>
+                    <text x="100" y="30" font-size="8" text-anchor="middle" fill="#666">437</text>
+
+                    <path id="section 438" class="cat-03" d="M46 34.5L60 24L78 14.5L96 57.5L86.5 63L77.5 70L46 34.5Z" fill="#D9D9D9" data-section="438" data-card="cat-03-listing"/>
+                    <text x="70" y="45" font-size="8" text-anchor="middle" fill="#666">438</text>
+
+                    <path id="section 439" class="cat-03" d="M59.5 89L20 64.5001L30.5 48.5L44.5 36L75 71L59.5 89Z" fill="#D9D9D9" data-section="439" data-card="cat-03-listing"/>
+                    <text x="50" y="65" font-size="8" text-anchor="middle" fill="#666">439</text>
+
+                    <path id="section 440" class="cat-03" d="M18.5 66.5L58 90.5L48.5 113L3.49999 102L10 83.5L18.5 66.5Z" fill="#D9D9D9" data-section="440" data-card="cat-03-listing"/>
+                    <text x="35" y="90" font-size="8" text-anchor="middle" fill="#666">440</text>
+
+                    <path id="section 441" class="cat-03" d="M3.5 104L48.5 115L47 121.75V128.5V142H0V123L3.5 104Z" fill="#D9D9D9" data-section="441" data-card="cat-03-listing"/>
+                    <text x="25" y="125" font-size="8" text-anchor="middle" fill="#666">441</text>
+
+                    <path id="section 141" class="cat-03" d="M49 118.5L110.25 128.5L109 140V150H48V125L49 118.5Z" fill="#D9D9D9" data-section="141" data-card="cat-03-listing"/>
+                    <text x="80" y="135" font-size="8" text-anchor="middle" fill="#666">141</text>
+
+                    <rect id="section 146" class="cat-03" x="63" y="274" width="46" height="27" fill="#D9D9D9" data-section="146" data-card="cat-03-listing"/>
+                    <text x="86" y="287.5" font-size="8" text-anchor="middle" fill="#666">146</text>
+
+                    <path id="section 147" class="cat-03" d="M63 302H109C108.412 313.22 111.5 323.5 111.5 323.5L64.5 330.5C62.4958 322.138 62.97 315.451 63 302Z" fill="#D9D9D9" data-section="147" data-card="cat-03-listing"/>
+                    <text x="86" y="315" font-size="8" text-anchor="middle" fill="#666">147</text>
+
+                    <rect id="section 120" class="cat-03" x="413" y="274" width="47" height="27" fill="#D9D9D9" data-section="120" data-card="cat-03-listing"/>
+                    <text x="436.5" y="287.5" font-size="8" text-anchor="middle" fill="#666">120</text>
+
+                    <path id="section 119" class="cat-03" d="M413 302H460V320.5L458 330.5L411.5 323.5L413 318V302Z" fill="#D9D9D9" data-section="119" data-card="cat-03-listing"/>
+                    <text x="436.5" y="315" font-size="8" text-anchor="middle" fill="#666">119</text>
+
+                    <path id="section 125" class="cat-03" d="M413 128.5L473.5 118.5L475 128.5V150H413V135.5V128.5Z" fill="#D9D9D9" data-section="125" data-card="cat-03-listing"/>
+                    <text x="443" y="140" font-size="8" text-anchor="middle" fill="#666">125</text>
+
+                    <path id="section 359" class="cat-06" d="M48 302H61V319L63 331L49.5 332.5L48 320.5V302Z" fill="#D9D9D9" data-section="359" data-card="cat-06-listing"/>
+                    <text x="55" y="315" font-size="6" text-anchor="middle" fill="#666">359</text>
+                    <path id="section 360" class="cat-06" d="M50.5 334.5L63.5 332.5L67 342.5L71.5 351.5L59 357.5L53 344.5L50.5 334.5Z" fill="#D9D9D9" data-section="360" data-card="cat-06-listing"/>
+                    <text x="60" y="345" font-size="6" text-anchor="middle" fill="#666">360</text>
+
+                    <path id="section 361" class="cat-06" d="M60 359L72.5 352L83.5 366L94.5 374L89 386L81 381.5L74.5 376L67 368.5L60 359Z" fill="#D9D9D9" data-section="361" data-card="cat-06-listing"/>
+                    <text x="75" y="370" font-size="6" text-anchor="middle" fill="#666">361</text>
+
+                    <path id="section 362" class="cat-06" d="M95.7907 374.955L106.791 379.455L119 382.5L117 395.5L103.291 392.455L90 387L95.7907 374.955Z" fill="#D9D9D9" data-section="362" data-card="cat-06-listing"/>
+                    <text x="105" y="385" font-size="6" text-anchor="middle" fill="#666">362</text>
+
+                    <path id="section 311" class="cat-06" d="M462 302H475V318.5L473.5 333L460 331L462 317V302Z" fill="#D9D9D9" data-section="311" data-card="cat-06-listing"/>
+                    <text x="468" y="315" font-size="6" text-anchor="middle" fill="#666">311</text>
+
+                    <path id="section 310" class="cat-06" d="M459.5 332.5L473 334.5L469 347L464 357L451.5 350.228L456.5 342L459.5 332.5Z" fill="#D9D9D9" data-section="310" data-card="cat-06-listing"/>
+                    <text x="465" y="345" font-size="6" text-anchor="middle" fill="#666">310</text>
+
+                    <path id="section 309" class="cat-06" d="M451 352L462.5 358.5L458 365L451 374.5L442 381.5L434 386L428.5 374.5L440.5 365L451 352Z" fill="#D9D9D9" data-section="309" data-card="cat-06-listing"/>
+                    <text x="449" y="368" font-size="6" text-anchor="middle" fill="#666">309</text>
+
+                    <path id="section 308" class="cat-06" d="M426.5 374.5L432.5 387.5L419.5 393L405.5 396L403 382.5L415 380L426.5 374.5Z" fill="#D9D9D9" data-section="308" data-card="cat-06-listing"/>
+                    <text x="420" y="386" font-size="6" text-anchor="middle" fill="#666">308</text>
+
+                    <path id="section 117" class="cat-03" d="M414.5 348L425.5 339L449.5 351.5L444.5 358L439.5 363L433.5 368.5L427.5 373L414.5 348Z" fill="#D9D9D9" data-section="117" data-card="cat-03-listing"/>
+                    <text x="430" y="360" font-size="8" text-anchor="middle" fill="#666">117</text>
+
+                    <path id="section 101" class="cat-03" d="M97.5864 338.653L108.586 348.653L96 372.5L89 368.5L83 363L78 357.5L73.5864 351.153L97.5864 338.653Z" fill="#D9D9D9" data-section="101" data-card="cat-03-listing"/>
+                    <text x="95" y="355" font-size="8" text-anchor="middle" fill="#666">101</text>
+
+                    <path id="section 127" class="cat-03" d="M434.901 63.7117L442.901 69.2117L450.401 75.7117L456.901 82.7117L463.401 91.2117L426.401 111.212L414.901 101.212L434.901 63.7117Z" fill="#D9D9D9" data-section="127" data-card="cat-03-listing"/>
+                    <text x="440" y="85" font-size="8" text-anchor="middle" fill="#666">127</text>
+
+                    <path id="section 139" class="cat-03" d="M60 91.5L65 84.5L72 76L80 70L88 64L108 101L97 111.5L60 91.5Z" fill="#D9D9D9" data-section="139" data-card="cat-03-listing"/>
+                    <text x="80" y="90" font-size="8" text-anchor="middle" fill="#666">139</text>
+
+                    <path id="section 140" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M97.7783 112.742L59 93L56 97.5L53 104.5L51 110L50 117L111 126.5L114 121L117 118.5L104.5 106.5L97.7783 112.742Z" fill="#D9D9D9" data-section="140" data-card="cat-03-listing"/>
+                    <text x="80" y="113" font-size="8" text-anchor="middle" fill="#666">140</text>
+
+                    <path id="section 138" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M103 57L89.5 63L109.404 102.096L105.5 106L117.5 118L118 118.5L117.701 117.92L127.5 114L117.5 53.5L103 57Z" fill="#D9D9D9" data-section="138" data-card="cat-03-listing"/>
+                    <text x="108" y="85" font-size="8" text-anchor="middle" fill="#666">138</text>
+
+                    <path id="section 102" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M118 332L105.5 344L109.833 348.333L97.5 373L107 378L120 381.5L127.5 335.5L118 332Z" fill="#D9D9D9" data-section="102" data-card="cat-03-listing"/>
+                    <text x="115" y="355" font-size="8" text-anchor="middle" fill="#666">102</text>
+
+                    <path id="section 148" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M112 324.5L65.5 332L67 339L72.5 350L99.0565 336.406L98 337L104.5 343L116.5 331L114.442 328.53L114.5 328.5L112 324.5Z" fill="#D9D9D9" data-section="148" data-card="cat-03-listing"/>
+                    <text x="90" y="336" font-size="8" text-anchor="middle" fill="#666">148</text>
+
+                    <path id="section 104" class="cat-01" fill-rule="evenodd" clip-rule="evenodd" d="M183 336H152V397H183H186.5V351H183V336Z" fill="#D9D9D9" data-section="104" data-card="cat-01-listing"/>
+                    <text x="170" y="365" font-size="8" text-anchor="middle" fill="#666">104</text>
+
+                    <path id="section 114" class="cat-01" fill-rule="evenodd" clip-rule="evenodd" d="M371 336H339.5V350.5H336.5V397H339.5H340H371V336Z" fill="#D9D9D9" data-section="114" data-card="cat-01-listing"/>
+                    <text x="355" y="365" font-size="8" text-anchor="middle" fill="#666">114</text>
+
+                    <path id="section 116" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M405.5 332L395.5 336L402.566 381L414 378.5L426.5 373.5L413.411 347.634L417.5 344L405.5 332Z" fill="#D9D9D9" data-section="116" data-card="cat-03-listing"/>
+                    <text x="410" y="355" font-size="8" text-anchor="middle" fill="#666">116</text>
+
+                    <path id="section 118" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M458 332L411 324.5L409.196 328.107L409 328L406 331L418.5 343L425.465 337.03L450.5 350L455 341L458 332Z" fill="#D9D9D9" data-section="118" data-card="cat-03-listing"/>
+                    <text x="435" y="340" font-size="8" text-anchor="middle" fill="#666">118</text>
+
+                    <path id="section 128" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M413 55.5L405 54.0001L395.5 113.5L405 118L418 106.5L413.738 101.291L433.5 63.5L427 60L420 57.5L413 55.5Z" fill="#D9D9D9" data-section="128" data-card="cat-03-listing"/>
+                    <text x="415" y="85" font-size="8" text-anchor="middle" fill="#666">128</text>
+
+                    <path id="section 126" class="cat-03" fill-rule="evenodd" clip-rule="evenodd" d="M469.5 103.5L464 93L426.357 113.376L419 107L406.5 118.5L409.5 122.5L411.5 127.164L473.5 117L469.5 103.5Z" fill="#D9D9D9" data-section="126" data-card="cat-03-listing"/>
+                    <text x="450" y="110" font-size="8" text-anchor="middle" fill="#666">126</text>
+                </g>
+                </svg>
+                </div>
+                <div class="category-filters">
+                    <button id="category-filter" class="category-filter1" data-category="cat-01"><p><i class="fa fa-circle"></i> Category 1</p></button>
+                    <button id="category-filter" class="category-filter2" data-category="cat-02"><p><i class="fa fa-circle"></i> Category 2</p></button>
+                    <button id="category-filter" class="category-filter3" data-category="cat-03"><p><i class="fa fa-circle"></i> Category 3</p></button>
+                    <button id="category-filter" class="category-filter4" data-category="cat-04"><p><i class="fa fa-circle"></i> Category 4</p></button>
+                </div>
+              </div>
+              <div class="ticket-listings-container">
+                <div class="ticket-controls">
+                  <div class="sort-options">
+                    <span class="sort-label">Sort by:</span>
+                    <select id="sort-select">
+                      <option value="price-asc">Price (Low to High)</option>
+                      <option value="price-desc">Price (High to Low)</option>
+                      <option value="rating-desc">Best Rated</option>
+                      <option value="section-asc">Section Number</option>
+                    </select>
+                  </div>
+                  <div class="quick-filters">
+                    <button class="quick-filter" data-filter="cheapest">
+                      <i class="fas fa-tag"></i> Cheapest
+                    </button>
+                    <button class="quick-filter" data-filter="best-rated">
+                      <i class="fas fa-star"></i> Best Rated
+                    </button>
+                    <button class="quick-filter" data-filter="best-value">
+                      <i class="fas fa-percentage"></i> Best Value
+                    </button>
+                  </div>
+                </div>
+                <div class="ticket-scroll-container">
+                  <div class="ticket-listings">
+                    <!-- Tickets will be inserted here automatically by JavaScript -->
+                  </div>
+                </div>
+              </div>
+        
+    </div> 
+
+    <footer>
+        <div class="contact">
+            <a href="terms.html" class="footer-link" id="aboutLink">Terms Of Service</a>
+            <a href="privacy.html" class="footer-link" id="privacyLink">Privacy Policy</a>
+            <a href="javascript:void(0)" class="footer-link" id="contactLink">Contact US</a>
+        </div>
+        <div class="titre" onclick="window.location.href='/html/home.html'">
+            <img src="/img/1.png" alt="Football Logo">
+            <h1>TikiTiki</h1>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span class="year">2025</span></p>
+        </div>
+    </footer>
+
+    <div id="ticketPopupContainer"></div>
+    <script src="/Js/pop-up.js"></script>
+    <script src="/Js/Home.js"></script>
+    <script src="/Js/auth.js"></script>
+    <script src="/Js/book-cat.js"></script> 
+      
+    </body>
+</html>
+
+
+
+

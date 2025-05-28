@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/Css/home.css">
+    <link rel="icon" href="/img/1.png" type="image/png">
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <header>
+        <div class="logo" onclick="window.location.href='home.html'">
+            <img src="/img/1.png" alt="Logo">
+            <h1>TikiTiki</h1>
+        </div>
+
+        <div class="search-container">
+            <div class="search">
+                <input type="text" placeholder="Search for a team or match..." id="searchInput">
+                <i class="fas fa-search" id="searchIcon"></i>
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+        </div>
+
+        <div class="nav-icons">
+            
+
+            <div class="dark-mode-toggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </div>
+
+            <div class="user-account">
+                <i class="fas fa-user" title="Account" id="userIcon"></i>
+                <div class="dropdown" id="accountDropdown">
+                    <!-- Content will be populated by JavaScript based on login status -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <button class="back-to-top" title="Go to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <section class="trending-section">
+            <div class="section-header">
+                <h2>Trending Matches</h2>
+                <div class="scroll-controls">
+                    <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="trending-container" id="trendingMatches">
+                <!-- Trending matches can be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section class="matches-section">
+            <h2>Upcoming Matches</h2>
+            <div class="match-filters">
+                <button class="filter-btn active" data-filter="all">All Matches</button>
+            </div>
+            <div class="cards-container" id="matchCardsContainer">
+                <!-- Matches will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Booking</h3>
+                    <p>100% guaranteed authentic tickets with secure payment</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Instant Delivery</h3>
+                    <p>Receive e-tickets immediately after purchase</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer service for any issues</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <a href="terms.html" class="footer-link" id="aboutLink">Terms Of Service</a>
+            <a href="privacy.html" class="footer-link" id="privacyLink">Privacy Policy</a>
+            <a href="javascript:void(0)" class="footer-link" id="contactLink">Contact US</a>
+        </div>
+        <div class="titre" onclick="window.location.href='/html/home.html'">
+            <img src="/img/1.png" alt="Football Logo">
+            <h1>TikiTiki</h1>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span class="year">2025</span></p>
+        </div>
+    </footer>
+
+    <script src="/Js/pop-up.js"></script>
+    <script src="/Js/auth.js"></script>
+    <script src="/Js/home.js"></script>
+    <script src="/Js/loadmatchhome.js"></script>
+</body>
+</html>
